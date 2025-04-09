@@ -1,4 +1,4 @@
-# project2
+
 # Team Art School Makeover 
 Teammates: Joshua Maners, Jian Liang, Raymond Duong
 
