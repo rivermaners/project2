@@ -66,3 +66,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
+
+  .application-form button:hover {
+    background-color: #002855;
+  }
