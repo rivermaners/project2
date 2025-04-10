@@ -79,7 +79,57 @@ body {
   padding-bottom: 2px;
 }
 
+/* Home Page */
+
+/* Publication Page */
+.pub-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 2rem;
+}
+
+.pub-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.pub-section img {
+  max-width: 40%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.pub-text {
+  flex: 1;
+  font-size: 20px;
+  padding: 1rem;
+}
+
+.pub-text h2 {
+  font-size: 36px;
+  color: #00356b;
+  margin-bottom: 1rem;
+}
+
+.pub-text h1 {
+  font-size: 28px;
+  color: #555;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+.pub-text p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+/* Apply Page */
 .application-form {
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
   padding: 2rem;
   background: #f4f4f4;
   border-radius: 8px;
@@ -90,10 +140,10 @@ body {
   font-size: 28px;
   color: #111;
   font-weight: normal;
-  text-align: center;
   max-width: 70%;
   margin: 1.5rem auto;
   line-height: 1.6;
+  text-align: center;
 }
 
 .apply-page h2 {
@@ -105,15 +155,15 @@ body {
   text-align: center;
 }
 
+.application-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
 .application-form label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: bold;
   color: #00356b;
-}
-
-.application-form .form-group {
-  margin-bottom: 1.5rem;
 }
 
 .application-form input,
@@ -128,6 +178,7 @@ body {
 }
 
 .application-form button {
+  padding: 0.75rem 1.5rem;
   background-color: #00356b;
   color: white;
   border: none;
