@@ -38,15 +38,45 @@ body {
   color: #000;
 }
 
-.logoimage {
-  position: absolute;
-  top: 20px;
-  left: 50%;
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #00356b;
 }
 
 .logoimage img {
-  width: 120px;
-  height: auto;
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #00356b;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.nav-links a.onpage {
+  border-bottom: 2px solid #00356b;
+  padding-bottom: 2px;
 }
 
 .application-form {
