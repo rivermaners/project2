@@ -79,6 +79,14 @@ body {
   padding-bottom: 2px;
 }
 
+.border {
+  border-bottom: 3px solid #00356b;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
 /* Home Page */
 
 /* Publication Page */
