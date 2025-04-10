@@ -30,9 +30,31 @@
         <h2>Graduate Admission</h2>
         <h1>To get into contact with an admissions counselor, fill out the form below.</h1>
       </div>
-
-      <!-- form will go here -->
-
+      <form class="application-form" action="#" method="post">
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="program">Program of Interest</label>
+          <select id="program" name="program" required>
+            <option value="" disabled selected>Select a program</option>
+            <option value="graphic-design">Graphic Design</option>
+            <option value="painting-printmaking">Painting/Printmaking</option>
+            <option value="photography">Photography</option>
+            <option value="sculpture">Sculpture</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message to Admissions Counselor</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="apply-button">Apply Now</button>
+      </form>
       <footer class="footer">
         <div class="footer-content">
           <p>&copy; 2025 Yale School of Art</p>
