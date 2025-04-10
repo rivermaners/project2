@@ -1,72 +1,112 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Georgia", serif;
+  color: #111;
+  background: white;
+  line-height: 1.6;
+}
+
+.footer {
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: #00356b;
+  margin: 0 0.5rem;
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #000;
+}
+
 .logoimage {
-    position: absolute; 
-    top: 20px;           
-    left: 50%;          
-  }
+  position: absolute;
+  top: 20px;
+  left: 50%;
+}
 
-  .logoimage img {
-    width: 120px;        
-    height: auto;        
-  }
+.logoimage img {
+  width: 120px;
+  height: auto;
+}
 
-  .application-form {
-    padding: 2rem;
-    background: #f4f4f4;
-    border-radius: 8px;
-    font-size: 18px;
-  }
+.application-form {
+  padding: 2rem;
+  background: #f4f4f4;
+  border-radius: 8px;
+  font-size: 18px;
+}
 
-  .apply-page h1 {
-    font-size: 28px;
-    color: #111;
-    font-weight: normal;
-    text-align: center;
-    max-width: 70%;
-    margin: 1.5rem auto;
-    line-height: 1.6;
-  }
+.apply-page h1 {
+  font-size: 28px;
+  color: #111;
+  font-weight: normal;
+  text-align: center;
+  max-width: 70%;
+  margin: 1.5rem auto;
+  line-height: 1.6;
+}
 
-  .apply-page h2 {
-    font-size: 36px;
-    color: #00356B;
-    font-weight: bold;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    text-align: center; 
-  }
+.apply-page h2 {
+  font-size: 36px;
+  color: #00356b;
+  font-weight: bold;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
 
-  .application-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: #00356B;
-  }
+.application-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #00356b;
+}
 
-  .application-form .form-group {
-    margin-bottom: 1.5rem;
-  }
+.application-form .form-group {
+  margin-bottom: 1.5rem;
+}
 
-  .application-form input,
-  .application-form select,
-  .application-form textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: "Georgia", serif;
-    font-size: 16px;
-  }
+.application-form input,
+.application-form select,
+.application-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Georgia", serif;
+  font-size: 16px;
+}
 
-  .application-form button {
-    background-color: #00356B;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+.application-form button {
+  background-color: #00356b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-  .application-form button:hover {
-    background-color: #002855;
-  }
+.application-form button:hover {
+  background-color: #002855;
+}
