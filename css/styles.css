@@ -41,3 +41,18 @@
     font-weight: bold;
     color: #00356B;
   }
+
+  .application-form .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .application-form input,
+  .application-form select,
+  .application-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "Georgia", serif;
+    font-size: 16px;
+  }
