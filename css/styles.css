@@ -8,3 +8,24 @@
     width: 120px;        
     height: auto;        
   }
+
+  .application-form {
+    padding: 2rem;
+    background: #f4f4f4;
+    border-radius: 8px;
+    font-size: 18px;
+  }
+
+  .apply-page h1 {
+    font-size: 28px;
+    color: #111;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  .apply-page h2 {
+    font-size: 36px;
+    color: #00356B;
+    font-weight: bold;
+    text-align: center; 
+  }
