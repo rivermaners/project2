@@ -1,0 +1,10 @@
+.logoimage {
+    position: absolute; 
+    top: 20px;           
+    left: 20px;          
+  }
+
+  .logoimage img {
+    width: 120px;        
+    height: auto;        
+  }
