@@ -185,6 +185,78 @@ body {
 }
 
 /* Apply Page */
+.apply-page h2 {
+  font-size: 2.5rem;
+  color: #00356b;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  margin: 3rem auto 2rem;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.apply-page h2:after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background: #00356b;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.apply-page h1 {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: normal;
+  max-width: 700px;
+  margin: 1.5rem auto;
+  line-height: 1.7;
+  text-align: center;
+  position: relative;
+}
+
+.apply-page h1 a {
+  color: #00356b;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 53, 107, 0.3);
+  transition: all 0.3s ease;
+}
+
+.apply-page h1 a:hover {
+  color: #002855;
+  border-bottom-color: #00356b;
+}
+
+/* Graduate Admission Section */
+.graduate-admission {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.graduate-admission h2 {
+  font-size: 2rem;
+  color: #00356b;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.graduate-admission h2:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background: #00356b;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .application-form {
   max-width: 700px;
   margin: 0 auto 4rem auto;
@@ -192,25 +264,6 @@ body {
   background: #f4f4f4;
   border-radius: 8px;
   font-size: 18px;
-}
-
-.apply-page h1 {
-  font-size: 28px;
-  color: #111;
-  font-weight: normal;
-  max-width: 70%;
-  margin: 1.5rem auto;
-  line-height: 1.6;
-  text-align: center;
-}
-
-.apply-page h2 {
-  font-size: 36px;
-  color: #00356b;
-  font-weight: bold;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  text-align: center;
 }
 
 .application-form .form-group {
@@ -315,6 +368,15 @@ body {
   .homepage h1 {
     font-size: 3rem;
   }
+  
+  .apply-page h2 {
+    font-size: 2.2rem;
+    margin: 2rem auto;
+  }
+  
+  .graduate-admission h2 {
+    font-size: 1.8rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -343,6 +405,22 @@ body {
   
   .address-and-image img {
     border-radius: 8px;
+  }
+  
+  .apply-page h2 {
+    font-size: 2rem;
+    padding: 0 1rem 1rem;
+    margin: 1.5rem auto;
+  }
+  
+  .apply-page h1 {
+    font-size: 1.3rem;
+    padding: 0 1rem;
+    margin: 1.2rem auto;
+  }
+  
+  .graduate-admission h2 {
+    font-size: 1.6rem;
   }
 }
 
@@ -395,5 +473,29 @@ body {
   
   .mobile-nav-toggle {
     display: block;
+  }
+  
+  .apply-page h2 {
+    font-size: 1.8rem;
+    letter-spacing: normal;
+    margin: 1rem auto;
+  }
+  
+  .apply-page h2:after {
+    width: 50px;
+  }
+  
+  .apply-page h1 {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 1rem auto;
+  }
+  
+  .graduate-admission h2 {
+    font-size: 1.4rem;
+  }
+  
+  .graduate-admission h2:after {
+    width: 40px;
   }
 }
