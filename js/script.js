@@ -228,7 +228,74 @@ document.addEventListener('DOMContentLoaded', function() {
 
     handleResize(); // Initialize
   }
+	
+// 6. Mobile Navigation Toggle - Only keep this version
+function setupMobileNavigation() {
+  const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
 
+  // Remove any existing toggle buttons first
+  const existingToggle = document.querySelector('.mobile-nav-toggle');
+  if (existingToggle) {
+    existingToggle.remove();
+  }
+
+  // Create new toggle button
+  const navToggle = document.createElement('button');
+  navToggle.className = 'mobile-nav-toggle';
+  navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.setAttribute('aria-controls', 'main-navigation');
+  navToggle.setAttribute('aria-label', 'Menu');
+  navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+  navbar.appendChild(navToggle);
+
+  const navLinks = document.querySelector('.nav-links');
+  if (!navLinks) return;
+  navLinks.id = 'main-navigation';
+
+  function toggleMenu() {
+    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', !isExpanded);
+    navLinks.classList.toggle('active');
+    navToggle.innerHTML = isExpanded ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
+    document.body.style.overflow = isExpanded ? '' : 'hidden';
+  }
+
+  navToggle.addEventListener('click', toggleMenu);
+
+  // Close menu when clicking on a nav link
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 480) {
+        toggleMenu();
+      }
+    });
+  });
+
+  function handleResize() {
+    if (window.innerWidth > 480) {
+      navLinks.classList.remove('active');
+      navLinks.style.display = 'flex';
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      document.body.style.overflow = '';
+    } else {
+      navLinks.style.display = 'none';
+    }
+  }
+
+  // Initialize
+  if (window.innerWidth <= 480) {
+    navLinks.style.display = 'none';
+  }
+
+  // Use debounce for resize events
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(handleResize, 100);
+  });
+}
   // Initialize all functions
   function init() {
     updateCopyrightYear();

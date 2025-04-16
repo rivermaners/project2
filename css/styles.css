@@ -418,150 +418,82 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  .homepage {
-    margin: 3rem auto;
-    padding: 0 1.5rem;
+  .navbar {
+    padding: 1rem;
+    flex-wrap: wrap;
+    position: relative;
   }
-  
-  .homepage h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1rem 0;
   }
-  
-  .homepage p {
-    font-size: 1.1rem;
-    padding: 0;
+
+  .nav-links.active {
+    display: flex;
   }
-  
-  .address-and-image {
-    padding: 0 1rem;
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: none;
+    border: none;
+    color: #00356b;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 999;
   }
-  
-  .address-and-image h2 {
-    font-size: 24px;
+
+  /* Hide any duplicate toggle buttons */
+  .mobile-nav-toggle ~ .mobile-nav-toggle {
+    display: none !important;
   }
-  
-  .address-and-image img {
-    border-radius: 8px;
+
+  .logoimage {
+    order: 0;
   }
-  
-  .apply-page h2 {
-    font-size: 2rem;
-    padding: 0 1rem 1rem;
-    margin: 1.5rem auto;
-  }
-  
-  .apply-page h1 {
-    font-size: 1.3rem;
-    padding: 0 1rem;
-    margin: 1.2rem auto;
-  }
-  
-  .graduate-admission h2 {
-    font-size: 1.6rem;
-  }
-  
-  .publications-intro,
-  .publications-cta,
-  .apply-intro,
-  .application-form-section {
-    padding: 1.5rem;
-  }
-  
-  .admission-info,
-  .undergraduate-info {
-    padding: 1.5rem;
+
+  .logo {
+    order: 2;
+    flex: 1;
+    text-align: center;
+    margin-left: 50px;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  .homepage {
-    margin: 2rem auto;
-    padding: 0 1rem;
+  .navbar {
+    padding: 0.75rem;
   }
-  
-  .homepage h1 {
-    font-size: 2rem;
-    letter-spacing: normal;
-  }
-  
-  .homepage h1:after {
-    width: 60px;
-    bottom: -10px;
-  }
-  
-  .homepage p {
-    font-size: 1rem;
-  }
-  
-  .homepage p:before {
-    font-size: 3rem;
-    left: -10px;
-    top: -20px;
-  }
-  
-  .address-and-image {
-    margin: 2rem 0;
-    padding: 0 0.5rem;
-  }
-  
-  .address-and-image h2 {
-    font-size: 22px;
-    margin-bottom: 1rem;
-  }
-  
-  .address-and-image img {
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 53, 107, 0.2);
-  }
-  
+
   .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    z-index: 998;
   }
-  
+
   .mobile-nav-toggle {
-    display: block;
+    font-size: 1.5rem;
+    padding: 0.5rem;
   }
-  
-  .apply-page h2 {
-    font-size: 1.8rem;
-    letter-spacing: normal;
-    margin: 1rem auto;
+
+  .logo {
+    font-size: 1.2rem;
+    margin-left: 40px;
   }
-  
-  .apply-page h2:after {
-    width: 50px;
-  }
-  
-  .apply-page h1 {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin: 1rem auto;
-  }
-  
-  .graduate-admission h2 {
-    font-size: 1.4rem;
-  }
-  
-  .graduate-admission h2:after {
-    width: 40px;
-  }
-  
-  .publications-intro,
-  .publications-cta,
-  .apply-intro,
-  .application-form-section {
-    padding: 1rem;
-  }
-  
-  .admission-info,
-  .undergraduate-info {
-    padding: 1rem;
-  }
-  
-  .lead {
-    font-size: 1.1rem;
+
+  .logoimage img {
+    height: 40px;
   }
 }
