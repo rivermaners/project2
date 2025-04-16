@@ -157,7 +157,7 @@ body {
 }
 
 .homepage p:before {
-  content: """;
+  content: "\""; /* Fixed: Escaped quotation mark */
   font-size: 4rem;
   color: rgba(0, 53, 107, 0.1);
   position: absolute;
