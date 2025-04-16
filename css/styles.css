@@ -88,6 +88,54 @@ body {
 }
 
 /* Home Page */
+.homepage {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.homepage h1 {
+  font-size: 3.5rem;
+  color: #00356b;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.homepage h1:after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background: #00356b;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.homepage p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: left;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.homepage p:before {
+  content: """;
+  font-size: 4rem;
+  color: rgba(0, 53, 107, 0.1);
+  position: absolute;
+  left: -15px;
+  top: -30px;
+  font-family: Georgia, serif;
+}
 
 /* Publication Page */
 .pub-section {
@@ -103,9 +151,11 @@ body {
 }
 
 .pub-section img {
-  max-width: 40%;
+  width: 100%;
+  max-width: 500px;
   height: auto;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .pub-text {
@@ -132,15 +182,6 @@ body {
   margin-bottom: 1rem;
   line-height: 1.8;
   font-size: 18px;
-}
-
-/* Publication Page - Responsive Image Sizing */
-.pub-section img {
-  width: 100%;
-  max-width: 500px; /* Limits maximum size */
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover; /* Ensures images maintain aspect ratio */
 }
 
 /* Apply Page */
@@ -265,14 +306,33 @@ body {
   box-shadow: 0 8px 20px rgba(0, 53, 107, 0.3);
 }
 
-/* Responsive Adjustments for Campus Image */
+/* Responsive Adjustments */
 @media only screen and (max-width: 992px) {
   .address-and-image img {
     max-width: 800px;
   }
+  
+  .homepage h1 {
+    font-size: 3rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
+  .homepage {
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+  }
+  
+  .homepage h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .homepage p {
+    font-size: 1.1rem;
+    padding: 0;
+  }
+  
   .address-and-image {
     padding: 0 1rem;
   }
@@ -287,9 +347,34 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+  .homepage {
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .homepage h1 {
+    font-size: 2rem;
+    letter-spacing: normal;
+  }
+  
+  .homepage h1:after {
+    width: 60px;
+    bottom: -10px;
+  }
+  
+  .homepage p {
+    font-size: 1rem;
+  }
+  
+  .homepage p:before {
+    font-size: 3rem;
+    left: -10px;
+    top: -20px;
+  }
+  
   .address-and-image {
     margin: 2rem 0;
-  padding: 0 0.5rem;
+    padding: 0 0.5rem;
   }
   
   .address-and-image h2 {
@@ -300,5 +385,15 @@ body {
   .address-and-image img {
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 53, 107, 0.2);
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .mobile-nav-toggle {
+    display: block;
   }
 }
