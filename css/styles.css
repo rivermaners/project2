@@ -199,3 +199,67 @@ body {
 .application-form button:hover {
   background-color: #002855;
 }
+
+/* Publication Page - Responsive Image Sizing */
+.pub-section img {
+  width: 100%;
+  max-width: 500px; /* Limits maximum size */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover; /* Ensures images maintain aspect ratio */
+}
+
+@media only screen and (max-width: 480px) {
+  /* Extra Small Devices */
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .pub-text {
+    padding: 0;
+  }
+  
+  .pub-text h2 {
+    font-size: 22px;
+  }
+  
+  .pub-text h1 {
+    font-size: 20px;
+  }
+  
+  .apply-page h1,
+  .apply-page h2 {
+    max-width: 90%;
+    font-size: 24px;
+  }
+}
+
+/* Responsive Layout Adjustments */
+@media only screen and (max-width: 992px) {
+  /* Medium Devices (Tablets) */
+  .pub-section,
+  .pub-section.reverse {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .pub-section img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .pub-text {
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  .pub-text h2 {
+    font-size: 28px;
+  }
+  
+  .pub-text h1 {
+    font-size: 22px;
+  }
+}
