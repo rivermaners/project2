@@ -134,6 +134,15 @@ body {
   font-size: 18px;
 }
 
+/* Publication Page - Responsive Image Sizing */
+.pub-section img {
+  width: 100%;
+  max-width: 500px; /* Limits maximum size */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover; /* Ensures images maintain aspect ratio */
+}
+
 /* Apply Page */
 .application-form {
   max-width: 700px;
@@ -200,66 +209,96 @@ body {
   background-color: #002855;
 }
 
-/* Publication Page - Responsive Image Sizing */
-.pub-section img {
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #00356b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  display: none;
+  z-index: 99;
+}
+
+.back-to-top:hover {
+  background-color: #002855;
+}
+
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #00356b;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Yale Campus Image Styling */
+.address-and-image {
+  text-align: center;
+  margin: 3rem 0;
+  padding: 0 2rem;
+}
+
+.address-and-image h2 {
+  font-size: 28px;
+  color: #00356b;
+  margin-bottom: 1.5rem;
+}
+
+.address-and-image img {
   width: 100%;
-  max-width: 500px; /* Limits maximum size */
+  max-width: 1000px;
   height: auto;
-  border-radius: 8px;
-  object-fit: cover; /* Ensures images maintain aspect ratio */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 53, 107, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.address-and-image img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 20px rgba(0, 53, 107, 0.3);
+}
+
+/* Responsive Adjustments for Campus Image */
+@media only screen and (max-width: 992px) {
+  .address-and-image img {
+    max-width: 800px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .address-and-image {
+    padding: 0 1rem;
+  }
+  
+  .address-and-image h2 {
+    font-size: 24px;
+  }
+  
+  .address-and-image img {
+    border-radius: 8px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-  /* Extra Small Devices */
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
+  .address-and-image {
+    margin: 2rem 0;
+  padding: 0 0.5rem;
   }
   
-  .pub-text {
-    padding: 0;
-  }
-  
-  .pub-text h2 {
+  .address-and-image h2 {
     font-size: 22px;
+    margin-bottom: 1rem;
   }
   
-  .pub-text h1 {
-    font-size: 20px;
-  }
-  
-  .apply-page h1,
-  .apply-page h2 {
-    max-width: 90%;
-    font-size: 24px;
-  }
-}
-
-/* Responsive Layout Adjustments */
-@media only screen and (max-width: 992px) {
-  /* Medium Devices (Tablets) */
-  .pub-section,
-  .pub-section.reverse {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .pub-section img {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-  
-  .pub-text {
-    padding: 0 1rem;
-    text-align: center;
-  }
-  
-  .pub-text h2 {
-    font-size: 28px;
-  }
-  
-  .pub-text h1 {
-    font-size: 22px;
+  .address-and-image img {
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 53, 107, 0.2);
   }
 }
