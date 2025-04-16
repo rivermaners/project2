@@ -3,78 +3,99 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yale School of Art Apply</title>
+    <meta name="description" content="Apply to Yale School of Art's MFA programs in Graphic Design, Painting/Printmaking, Photography, and Sculpture">
+    <title>Yale School of Art - Apply</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <script defer src="js/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
   </head>
   <body>
     <header class="navbar">
       <div class="logo">Yale School of Art</div>
       <div class="logoimage">
-        <img src="assets/yalelogo.png" alt="Yale Logo" />
+        <img src="assets/yalelogo.png" alt="Yale University Logo" loading="lazy"/>
       </div>
+      <button class="mobile-nav-toggle" aria-expanded="false" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="publications.html">Publications</a></li>
-          <li><a href="apply.html" class="onpage">Apply</a></li>
+          <li><a href="apply.html" class="onpage" aria-current="page">Apply</a></li>
         </ul>
       </nav>
     </header>
-    <div class="apply-page">
-      <h2>
-        The Yale School of Art is a graduate school that confers Master of Fine
-        Arts Degrees in Graphic Design, Painting/Printmaking, Photography, and
-        Sculpture
-      </h2>
-      <h1>
-        For information on applications to the MFA program, please naviagte to
-        “Graduate Admission” below.
-      </h1>
-      <h1>
-        The undergraduate admissions process is handled entirely through
-        <a href="https://admissions.yale.edu/">Yale College</a>. Please refer
-        all undergraduate admissions questions to the
-        <a href="https://admissions.yale.edu/contact-us"
-          >Yale College Undergraduate Admissions Office</a
-        >
-      </h1>
-      <div class="border"></div>
-      <h2>Graduate Admission</h2>
-      <h1>
-        To get into contact with an admissions counselor, fill out the form
-        below.
-      </h1>
-    </div>
-    <form class="application-form" action="#" method="post">
-      <div class="form-group">
-        <label for="fullname">Full Name</label>
-        <input type="text" id="fullname" name="fullname" required />
-      </div>
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div class="form-group">
-        <label for="program">Program of Interest</label>
-        <select id="program" name="program" required>
-          <option value="" disabled selected>Select a program</option>
-          <option value="graphic-design">Graphic Design</option>
-          <option value="painting-printmaking">Painting/Printmaking</option>
-          <option value="photography">Photography</option>
-          <option value="sculpture">Sculpture</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="message">Message to Admissions Counselor</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
-      <button type="apply-button">Apply Now</button>
-    </form>
+
+    <main>
+      <section class="apply-intro">
+        <h1>Application Process</h1>
+        <p class="lead">
+          The Yale School of Art is a graduate school that confers Master of Fine
+          Arts Degrees in Graphic Design, Painting/Printmaking, Photography, and
+          Sculpture.
+        </p>
+        
+        <article class="admission-info">
+          <h2>Graduate Admission</h2>
+          <p>
+            For information on applications to the MFA program, please see the
+            application form below.
+          </p>
+        </article>
+
+        <article class="undergraduate-info">
+          <h2>Undergraduate Admission</h2>
+          <p>
+            The undergraduate admissions process is handled entirely through
+            <a href="https://admissions.yale.edu/" target="_blank" rel="noopener noreferrer">Yale College</a>. 
+            Please refer all undergraduate admissions questions to the
+            <a href="https://admissions.yale.edu/contact-us" target="_blank" rel="noopener noreferrer">
+              Yale College Undergraduate Admissions Office
+            </a>.
+          </p>
+        </article>
+      </section>
+
+      <div class="border" aria-hidden="true"></div>
+
+      <section class="application-form-section">
+        <h2>Contact Admissions</h2>
+        <p>To get in touch with an admissions counselor, please fill out the form below.</p>
+
+        <form class="application-form" action="#" method="post">
+          <div class="form-group">
+            <label for="fullname">Full Name <span class="required">*</span></label>
+            <input type="text" id="fullname" name="fullname" required aria-required="true"/>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required aria-required="true"/>
+          </div>
+
+          <div class="form-group">
+            <label for="program">Program of Interest <span class="required">*</span></label>
+            <select id="program" name="program" required aria-required="true">
+              <option value="" disabled selected>Select a program</option>
+              <option value="graphic-design">Graphic Design</option>
+              <option value="painting-printmaking">Painting/Printmaking</option>
+              <option value="photography">Photography</option>
+              <option value="sculpture">Sculpture</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message to Admissions Counselor <span class="required">*</span></label>
+            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+          </div>
+
+          <button type="submit" class="apply-button">Submit Inquiry</button>
+        </form>
+      </section>
+    </main>
+
     <footer class="footer">
       <div class="footer-content">
         <p>&copy; <span id="year"></span> Yale School of Art</p>
@@ -82,27 +103,35 @@
           <a
             href="https://www.instagram.com/yaleschoolofart/?hl=en"
             target="_blank"
+            rel="noopener noreferrer"
             aria-label="Instagram"
-            ><i class="fab fa-instagram"></i
-          ></a>
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
           <a
             href="https://x.com/yaleschoolofart"
             target="_blank"
+            rel="noopener noreferrer"
             aria-label="Twitter"
-            ><i class="fab fa-twitter"></i
-          ></a>
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
           <a
             href="https://www.facebook.com/YaleSchoolofArt/"
             target="_blank"
+            rel="noopener noreferrer"
             aria-label="Facebook"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
           <a
             href="https://www.youtube.com/channel/UCDwJT0mYodTSodcpH-hGmdA"
             target="_blank"
+            rel="noopener noreferrer"
             aria-label="YouTube"
-            ><i class="fab fa-youtube"></i
-          ></a>
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
         </div>
       </div>
     </footer>

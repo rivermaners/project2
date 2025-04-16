@@ -11,6 +11,37 @@ body {
   line-height: 1.6;
 }
 
+/* Center-aligned Sections */
+.publications-intro,
+.publications-cta,
+.apply-intro,
+.application-form-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Lead Paragraph Styling */
+.lead {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Admission Info Boxes */
+.admission-info,
+.undergraduate-info {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
 .footer {
   padding: 2rem 1rem;
   text-align: center;
@@ -81,10 +112,8 @@ body {
 
 .border {
   border-bottom: 3px solid #00356b;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin: 3rem auto;
+  width: 100px;
 }
 
 /* Home Page */
@@ -143,7 +172,9 @@ body {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  margin: 3rem 2rem;
+  margin: 3rem auto;
+  max-width: 1200px;
+  padding: 0 2rem;
 }
 
 .pub-section.reverse {
@@ -377,6 +408,13 @@ body {
   .graduate-admission h2 {
     font-size: 1.8rem;
   }
+  
+  .publications-intro,
+  .publications-cta,
+  .apply-intro,
+  .application-form-section {
+    padding: 2rem 1.5rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -421,6 +459,18 @@ body {
   
   .graduate-admission h2 {
     font-size: 1.6rem;
+  }
+  
+  .publications-intro,
+  .publications-cta,
+  .apply-intro,
+  .application-form-section {
+    padding: 1.5rem;
+  }
+  
+  .admission-info,
+  .undergraduate-info {
+    padding: 1.5rem;
   }
 }
 
@@ -497,5 +547,21 @@ body {
   
   .graduate-admission h2:after {
     width: 40px;
+  }
+  
+  .publications-intro,
+  .publications-cta,
+  .apply-intro,
+  .application-form-section {
+    padding: 1rem;
+  }
+  
+  .admission-info,
+  .undergraduate-info {
+    padding: 1rem;
+  }
+  
+  .lead {
+    font-size: 1.1rem;
   }
 }
