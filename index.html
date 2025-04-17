@@ -11,7 +11,7 @@
     <script defer src="js/script.js"></script>
   </head>
   <body>
-    <header class="navbar">
+     <header class="navbar">
       <div class="logo">Yale School of Art</div>
       <div class="logoimage">
         <img src="assets/yalelogo.png" alt="Yale University Logo" loading="lazy"/>
@@ -21,9 +21,33 @@
       </button>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html" class="onpage" aria-current="page">Home</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="apply.html">Apply</a></li>
+          <li class="dropdown">
+            <a href="index.html" class="dropdown-toggle onpage" aria-current="page">Home</a>
+            <div class="dropdown-content">
+              <a href="index.html" aria-current="page">Overview</a>
+              <a href="#about">About</a>
+              <a href="#news">News</a>
+              <a href="#events">Events</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="publications.html" class="dropdown-toggle">Publications</a>
+            <div class="dropdown-content">
+              <a href="publications.html">All Publications</a>
+              <a href="#student-work">Student Work</a>
+              <a href="#faculty-books">Faculty Books</a>
+              <a href="#archives">Archives</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="apply.html" class="dropdown-toggle">Apply</a>
+            <div class="dropdown-content">
+              <a href="apply.html">Application Portal</a>
+              <a href="#requirements">Requirements</a>
+              <a href="#deadlines">Deadlines</a>
+              <a href="#financial-aid">Financial Aid</a>
+            </div>
+          </li>
         </ul>
       </nav>
     </header>

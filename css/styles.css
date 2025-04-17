@@ -417,55 +417,83 @@ body {
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .navbar {
-    padding: 1rem;
-    flex-wrap: wrap;
-    position: relative;
-  }
-
-  .nav-links {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
-    padding: 1rem 0;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .mobile-nav-toggle {
-    display: block;
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    background: none;
-    border: none;
-    color: #00356b;
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 999;
-  }
-
-  /* Hide any duplicate toggle buttons */
-  .mobile-nav-toggle ~ .mobile-nav-toggle {
-    display: none !important;
-  }
-
-  .logoimage {
-    order: 0;
-  }
-
-  .logo {
-    order: 2;
-    flex: 1;
-    text-align: center;
-    margin-left: 50px;
-  }
-}
+  /* Additional dropdown styles */
+      .dropdown {
+        position: relative;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 200px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        z-index: 1001;
+        border-radius: 4px;
+        padding: 0.5rem 0;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .dropdown-content a {
+        color: #00356b;
+        padding: 0.75rem 1rem;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: #f5f5f5;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      
+      .nav-links li {
+        position: relative;
+      }
+      
+      .dropdown-toggle::after {
+        content: " ▾";
+        font-size: 0.8em;
+      }
+      
+      /* Mobile dropdown styles */
+      @media screen and (max-width: 768px) {
+        .dropdown-content {
+          position: static;
+          box-shadow: none;
+          display: none;
+          width: 100%;
+          background-color: transparent;
+          transform: none;
+          padding: 0;
+        }
+        
+        .dropdown.active .dropdown-content {
+          display: block;
+        }
+        
+        .dropdown-toggle::after {
+          content: " ▾";
+          float: right;
+          margin-right: 1rem;
+        }
+        
+        .dropdown.active .dropdown-toggle::after {
+          content: " ▴";
+        }
+        
+        .dropdown-content a {
+          padding: 0.75rem 2rem;
+          text-align: left;
+          background-color: #f9f9f9;
+        }
 
 @media only screen and (max-width: 480px) {
   .navbar {
