@@ -8,10 +8,46 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      /* Add this new style for the quotation paragraph */
+      .homepage p {
+        position: relative;
+        padding: 20px;
+        font-style: italic;
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #333;
+        max-width: 800px;
+        margin: 2rem auto;
+        text-align: left;
+        border-left: 3px solid #00356b;
+        background-color: #f9f9f9;
+      }
+
+      .homepage p::before,
+      .homepage p::after {
+        content: '"';
+        font-size: 3rem;
+        color: rgba(0, 53, 107, 0.2);
+        position: absolute;
+        font-family: Georgia, serif;
+        line-height: 1;
+      }
+
+      .homepage p::before {
+        left: 5px;
+        top: 5px;
+      }
+
+      .homepage p::after {
+        right: 5px;
+        bottom: -15px;
+      }
+    </style>
     <script defer src="js/script.js"></script>
   </head>
   <body>
-     <header class="navbar">
+    <header class="navbar">
       <div class="logo">Yale School of Art</div>
       <div class="logoimage">
         <img src="assets/yalelogo.png" alt="Yale University Logo" loading="lazy"/>
