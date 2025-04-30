@@ -11,7 +11,6 @@ body {
   line-height: 1.6;
 }
 
-/* Center-aligned Sections */
 .publications-intro,
 .publications-cta,
 .apply-intro,
@@ -22,7 +21,6 @@ body {
   padding: 2rem;
 }
 
-/* Lead Paragraph Styling */
 .lead {
   font-size: 1.3rem;
   line-height: 1.7;
@@ -30,7 +28,6 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Admission Info Boxes */
 .admission-info,
 .undergraduate-info {
   background: #f9f9f9;
@@ -116,7 +113,6 @@ body {
   width: 100px;
 }
 
-/* Home Page */
 .homepage {
   max-width: 1200px;
   margin: 4rem auto;

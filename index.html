@@ -8,42 +8,6 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <style>
-      /* Add this new style for the quotation paragraph */
-      .homepage p {
-        position: relative;
-        padding: 20px;
-        font-style: italic;
-        font-size: 1.2rem;
-        line-height: 1.8;
-        color: #333;
-        max-width: 800px;
-        margin: 2rem auto;
-        text-align: left;
-        border-left: 3px solid #00356b;
-        background-color: #f9f9f9;
-      }
-
-      .homepage p::before,
-      .homepage p::after {
-        content: '"';
-        font-size: 3rem;
-        color: rgba(0, 53, 107, 0.2);
-        position: absolute;
-        font-family: Georgia, serif;
-        line-height: 1;
-      }
-
-      .homepage p::before {
-        left: 5px;
-        top: 5px;
-      }
-
-      .homepage p::after {
-        right: 5px;
-        bottom: -15px;
-      }
-    </style>
     <script defer src="js/script.js"></script>
   </head>
   <body>
@@ -57,33 +21,9 @@
       </button>
       <nav>
         <ul class="nav-links">
-          <li class="dropdown">
-            <a href="index.html" class="dropdown-toggle onpage" aria-current="page">Home</a>
-            <div class="dropdown-content">
-              <a href="index.html" aria-current="page">Overview</a>
-              <a href="#about">About</a>
-              <a href="#news">News</a>
-              <a href="#events">Events</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="publications.html" class="dropdown-toggle">Publications</a>
-            <div class="dropdown-content">
-              <a href="publications.html">All Publications</a>
-              <a href="#student-work">Student Work</a>
-              <a href="#faculty-books">Faculty Books</a>
-              <a href="#archives">Archives</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="apply.html" class="dropdown-toggle">Apply</a>
-            <div class="dropdown-content">
-              <a href="apply.html">Application Portal</a>
-              <a href="#requirements">Requirements</a>
-              <a href="#deadlines">Deadlines</a>
-              <a href="#financial-aid">Financial Aid</a>
-            </div>
-          </li>
+          <li><a href="index.html" class="onpage" aria-current="page">Home</a></li>
+          <li><a href="publications.html" >Publications</a></li>
+          <li><a href="apply.html" >Apply</a></li>
         </ul>
       </nav>
     </header>
